@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Left side: Previous guesses -->
+  <div class="previous-guesses">
+    <h3>Previous Guesses:</h3>
+    <ul id="guessHistory"></ul>
+  </div>
+
+  <!-- Centered Game -->
+  <div class="container game-container">
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <button id="submitGuess">Submit</button>
+    <p id="feedback"></p>
+    <p id="attempts"></p>
+    <button id="playAgain" style="display:none;">Play Again</button>
+    <br><br>
+    <a href="../../index.html">⬅️ Back to Game Menu</a>
+  </div>
+
+  <div class="scoreboard">
+  <h3>🏆 Guess History</h3>
+  <ul id="scoreList">
+    <!-- Each game's guess count will appear here -->
+  </ul>
+  <button id="clearHistory">Clear History</button> <!-- Clear history button -->
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

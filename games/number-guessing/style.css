@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background: white;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .previous-guesses {
+    position: fixed;
+    left: 300px;
+    background: white;
+    padding: 20px;
+    max-height: 90%;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  ul#guessHistory {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul#guessHistory li {
+    background: #eee;
+    margin: 4px auto;
+    padding: 5px;
+    width: 120px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1em;
+    width: 60%;
+  }
+
+  .scoreboard {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #scoreList {
+  flex-grow: 1; /* This will allow the list to grow and take up remaining space */
+  overflow-y: auto; /* To allow scrolling if the list gets too long */
+  margin-bottom: 10px;
+}
+
+  #clearHistory {
+    align-self: center; /* This will center the button horizontally */
+    margin-top: auto; /* Push the button to the bottom of the scoreboard */
+  }
