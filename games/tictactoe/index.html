@@ -7,39 +7,54 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  <button id="darkModeToggle" class="toggle-btn">🌙 Toggle Dark Mode</button>
+  <div id="main-container">
+    <div id="left-side">
+      <div id="name-entry">
+        <h2>Enter Player Names</h2>
+        <input type="text" id="player1" placeholder="Player 1 Name" />
+        <input type="text" id="player2" placeholder="Player 2 Name" />
+        <button id="startBtn">Start Game</button>
+        <br><br>
+        <a href="../../index.html">⬅️ Back to Game Menu</a>
+      </div>
 
-    
-  <div id="name-entry">
-    <h2>Enter Player Names</h2>
-    <input type="text" id="player1" placeholder="Player 1 Name" />
-    <input type="text" id="player2" placeholder="Player 2 Name" />
-    <button id="startBtn">Start Game</button>
-  </div>
+      <div id="game-area" style="display: none;">
+        <h1>Tic Tac Toe</h1>
 
-  <div id="game-area" style="display: none;">
-    <h1>Tic Tac Toe</h1>
+        <div id="scoreboard">
+          <div><span id="player1Label">Player 1</span>: <span id="score1">0</span></div>
+          <div><span id="player2Label">Player 2</span>: <span id="score2">0</span></div>
+        </div>
 
-    <div id="scoreboard">
-      <div><span id="player1Label">Player 1</span>: <span id="score1">0</span></div>
-      <div><span id="player2Label">Player 2</span>: <span id="score2">0</span></div>
+        <div id="board">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+
+        <div id="controls">
+            <button id="resetRound">Reset Round</button>
+            <button id="resetGame">Reset Game</button>
+            <button id="saveGame">💾 Save Game</button>
+            <button id="newGameBtn">🔁 New Game</button>
+            <br><br>
+            <a href="../../index.html">⬅️ Back to Game Menu</a>
+        </div>
+      </div>
     </div>
 
-    <div id="board">
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
-    </div>
-
-    <div id="controls">
-      <button id="resetRound">Reset Round</button>
-      <button id="resetGame">Reset Game</button>
+    <div id="right-side">
+      <h2>Game History</h2>
+      <div id="historyList"></div>
+      <button id="resumeBtn" style="display: none;">Back to Game</button>
+      <button id="clearHistoryBtn">🗑️ Clear All History</button>
     </div>
   </div>
 
